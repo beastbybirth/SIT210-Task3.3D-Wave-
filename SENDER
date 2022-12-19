@@ -1,15 +1,3 @@
-/*
-  ArduinoMqttClient - WiFi Simple Sender
-
-  This example connects to a MQTT broker and publishes a message to
-  a topic once a second.
-
-  The circuit:
-  - Arduino MKR 1000, MKR 1010 or Uno WiFi Rev2 board
-
-  This example code is in the public domain.
-*/
-
 #include <ArduinoMqttClient.h>
 #if defined(ARDUINO_SAMD_MKRWIFI1010) || defined(ARDUINO_SAMD_NANO_33_IOT) || defined(ARDUINO_AVR_UNO_WIFI_REV2)
   #include <WiFiNINA.h>
@@ -29,17 +17,10 @@ float distance_cm;
 
 #include "arduino_secrets.h"
 
-
-
 ///////please enter your sensitive data in the Secret tab/arduino_secrets.h
 char ssid[] = SECRET_SSID;    // your network SSID (name)
 char pass[] = SECRET_PASS;    // your network password (use for WPA, or use as key for WEP)
 
-// To connect with SSL/TLS:
-// 1) Change WiFiClient to WiFiSSLClient.
-// 2) Change port value from 1883 to 8883.
-// 3) Change broker value to a server with a known SSL/TLS root certificate 
-//    flashed in the WiFi module.
 
 WiFiClient wifiClient;
 MqttClient mqttClient(wifiClient);
