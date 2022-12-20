@@ -45,7 +45,7 @@ void setup() {
   Serial.println("You're connected to the network");
   Serial.println();
 
-  // You can provide a unique client ID, if not set the library uses Arduino-millis()
+  // You can provide a unique client ID
   // Each client must have a unique client ID
   // mqttClient.setId("clientId");
 
